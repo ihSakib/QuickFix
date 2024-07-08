@@ -1,11 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QuickFix</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickFix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header></header>
+    <!-- main content -->
+    <main>
+      <!-- hero section -->
+      <section class="section1 hero bg-[#ECFFFD] px-12 lg:px-28">
+        <!-- hero section header -->
+        <div
+          class="flex md:flex-row flex-col gap-6 md:justify-between items-center py-6"
+        >
+          <div>
+            <img class="w-32" src="./assets/images/Main-logo.png" alt="" />
+          </div>
+          <div class="flex gap-4 flex-row items-center">
+            <a
+              class="py-3 px-6 font-semibold rounded-lg md:text-xl border-2 border-[#006b61] text-[#006b61] flex items-start"
+              href=""
+              >Log In</a
+            >
+            <a
+              class="py-3 px-6 font-semibold rounded-lg md:text-xl border-2 bg-[#006b61] text-white flex items-start"
+              href=""
+              >Register as Partner</a
+            >
+          </div>
+        </div>
+        <!-- hero section mid content -->
+        <div
+          class="grid xl:grid-cols-2 md:gap-16 gap-10 items-center lg:mt-5 py- lg:py-16 xl:py-0"
+        >
+          <div>
+            <h1 class="lg:text-6xl md:text-4xl text-3xl font-bold py-4">
+              Experience the Best in Auto Repair and Maintenance
+            </h1>
+            <p class="text-lg text-neutral-600 font-semibold">
+              Welcome to QuickFix Car Repair Workshop! We provide expert
+              maintenance and repairs with a focus on quality and transparency.
+            </p>
+            <p class="py-6 flex items-center gap-2">
+              <span
+                class="md:text-2xl text-xl py-2 px-4 rounded-lg text-white bg-[#006B61] font-bold"
+                >5000+</span
+              >
+              <span class="md:text-2xl text-xl text-neutral-600 font-semibold"
+                >Offer collected</span
+              >
+            </p>
+            <p>
+              <span class="md:text-2xl text-lg text-neutral-600 font-semibold"
+                >In collaboration with</span
+              >
+              <img
+                class="lg:w-32 w-24 block py-2"
+                src="./assets/images/Company logo.png"
+                alt=""
+              />
+            </p>
+          </div>
+          <!-- hero section form -->
+          <div>
+            <form
+              class="text-white bg-[#006b61] form-bg rounded-3xl px-8 py-10"
+              action=""
+            >
+              <h2 class="md:text-3xl text-2xl text-white font-bold">
+                Find the right workshop for your needs
+              </h2>
+              <p class="text-white pt-2">
+                The service is free and completely non-binding.
+              </p>
+              <div class="tab py-4">
+                <h3 class="pt-2 pb-2 md:text-2xl text-xl font-semibold">
+                  Select type of vehicles
+                </h3>
+                <label
+                  class="bg-white flex items-center md:p-4 p-3 my-3 rounded-lg text-neutral-900 font-semibold gap-2 text-lg"
+                  for="car"
+                >
+                  <input class="h-6 w-6" type="checkbox" name="" id="car" /> Car
+                </label>
+                <label
+                  class="bg-white flex items-center md:p-4 p-3 my-3 rounded-lg text-neutral-900 font-semibold gap-2 text-lg"
+                  for="bike"
+                >
+                  <input class="h-6 w-6" type="checkbox" name="" id="bike" />
+                  Bike
+                </label>
+                <label
+                  class="bg-white flex items-center md:p-4 p-3 mt-3 rounded-lg text-neutral-900 font-semibold gap-2 text-lg"
+                  for="Truk"
+                >
+                  <input class="h-6 w-6" type="checkbox" name="" id="Truk" />
+                  Truk
+                </label>
+              </div>
+              <div>
+                <button
+                  class="md:p-4 p-3 my-4 block w-full h-full text-lg font-semibold rounded-xl bg-[#f15757]"
+                >
+                  Next
+                </button>
+              </div>
+              <p class="text-sm text-center">
+                Your privacy is safeguarded: We process all data in
+                accordance<br />with the Personal Data Protection Regulation
+                (GDPR).
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ribbon after hero section -->
+      <section class="section2">
+        <div
+          class="flex bg-[#F9FAFB] flex-col text-center lg:text-left justify-center py-12 px-12 gap-8 lg:flex-row lg:py-16 lg:gap-0 lg:px-36 items-center"
+        >
+          <div>
+            <p>
+              <span class="text-xl font-bold">Stay Anonymous:</span><br />
+              <span class="text-[#475467]"
+                >Your data is kept confidential and not shared with
+                anyone.</span
+              >
+            </p>
+          </div>
+          <div
+            class="hidden lg:block lg:mx-16 lg:border-l-[#98A2B3] lg:border-l-2 lg:h-12"
+          ></div>
+          <div>
+            <p>
+              <span class="text-xl font-bold">No Obligation:</span><br />
+              <span class="text-[#475467]">
+                All offers are completely free and non-binding.
+              </span>
+            </p>
+          </div>
+          <div
+            class="hidden lg:block lg:mx-16 lg:border-l-[#98A2B3] lg:border-l-2 lg:h-12"
+          ></div>
+          <div>
+            <p>
+              <span class="text-xl font-bold">Best Prices:</span><br />
+              <span class="text-[#475467]"
+                >Gather quotes from various sources to ensure competitive
+                pricing.</span
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- how it works section -->
+      <section class="section3 how py-8 px-16 lg:px-20 lg:py-16">
+        <h1 class="text-center text-4xl py-4 font-bold">How it work</h1>
+        <p class="lg:w-1/2 mx-auto text-center text-lg text-neutral-600">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that.
+        </p>
+        <div
+          class="flex flex-col justify-center md:flex-row gap-4 py-20 lg:py-24"
+        >
+          <div class="bg-[#E0FFFC] py-10 rounded-lg px-8">
+            <img
+              class="w-1/2 mx-auto"
+              src="./assets/images/Without_bg.png"
+              alt=""
+            />
+            <h2 class="text-2xl font-bold pt-8 text-center">
+              Diagnostic Process
+            </h2>
+            <p class="text-center py-2 text-neutral-700">
+              Describe the advanced diagnostic tools and technology your
+              workshop uses to identify issues accurately.
+            </p>
+          </div>
+          <div class="bg-[#E0FFFC] py-10 rounded-lg px-8">
+            <img
+              class="w-1/2 mx-auto"
+              src="./assets/images/Without_bg-1.png"
+              alt=""
+            />
+            <h2 class="text-2xl font-bold pt-8 text-center">
+              Repair Procedures
+            </h2>
+            <p class="text-center py-2 text-neutral-700">
+              Emphasize the expertise and certifications of your technicians,
+              assuring customers that their cars are in capable hands.
+            </p>
+          </div>
+          <div class="bg-[#E0FFFC] py-10 rounded-lg px-8">
+            <img
+              class="w-1/2 mx-auto"
+              src="./assets/images/Without_bg-2.png"
+              alt=""
+            />
+            <h2 class="text-2xl font-bold pt-8 text-center">
+              Quality Assurance
+            </h2>
+            <p class="text-center py-2 text-neutral-700">
+              Describe your rigorous testing procedures to ensure repairs are
+              completed to the highest standards.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- process video section -->
+      <section class="section4 process-video">
+        <div class="px-8 md:px-12 lg:px-20 py-12 lg:py-20 bg-[#006B61]">
+          <h2
+            class="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center py-4"
+          >
+            See our process
+          </h2>
+          <p class="text-center lg:w-1/2 mx-auto text-white">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that.
+          </p>
+          <video
+            class="mx-auto lg:w-3/5 py-4 pt-12"
+            src=""
+            poster="./assets/images/Rectangle 501.png"
+            controls
+          ></video>
+        </div>
+      </section>
+
+      <!-- testimonial section -->
+      <section class="section5 testimonial"></section>
+      <!-- faq section -->
+      <section class="section6 faq"></section>
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+  </body>
 </html>
