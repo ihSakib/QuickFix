@@ -41,3 +41,11 @@ function prevSlide() {
   showSlide(currentIndex);
 }
 
+/******* */
+function openSideBar() {
+  document.getElementById("sidebar").style.transition = ".6s";
+  document.getElementById("sidebar").style.width = "60%";
+}
+function closeSideBar() {
+  document.getElementById("sidebar").style.width = "0%";
+}
