@@ -1,44 +1,43 @@
-const handleSubmit = async (event) => {
-  event.preventDefault();
+/********js for testimonial section********/
+let slides = document.getElementsByClassName("child");
+let currentIndex = 0;
+let visibleSlides = 3; // Default for wide screens
 
-  const myForm = event.target;
-  const formData = new FormData(myForm);
-  const messageDiv = document.getElementById("submissionMessage");
-
-  try {
-    const response = await fetch("/", {
-      method: "POST",
-      body: formData,
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    messageDiv.style.display = "block";
-    messageDiv.innerHTML = "File Uploaded 🥳";
-    messageDiv.style.color = "green";
-    myForm.reset();
-  } catch (error) {
-    messageDiv.textContent = `Submission failed: ${error}`;
-    messageDiv.style.color = "red";
+// Function to determine the number of visible slides based on screen width
+function updateVisibleSlides() {
+  if (window.innerWidth < 1024) {
+    visibleSlides = 1;
+  } else {
+    visibleSlides = 3;
   }
-};
+  showSlide(currentIndex);
+}
 
-document.getElementById("uploadForm").addEventListener("submit", handleSubmit);
+window.onresize = updateVisibleSlides;
+window.onload = updateVisibleSlides;
 
-/*=========for loader============*/
+function showSlide(index) {
+  // Hide all slides initially
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
 
-document.addEventListener("DOMContentLoaded", function () {
-  setTimeout(function () {
-    var loadingDiv = document.getElementById("loader-container");
-    if (loadingDiv) {
-      loadingDiv.style.display = "none";
-    }
+  // Show the appropriate number of slides based on the current index
+  for (let i = 0; i < visibleSlides; i++) {
+    let slideIndex = (index + i) % slides.length;
+    slides[slideIndex].style.display = "flex";
+    slides[slideIndex].style.flexDirection = "column";
+    slides[slideIndex].style.justifyContent = "space-between";
+  }
+}
 
-    var content = document.getElementById("main-content");
-    if (content) {
-      content.classList.add("visible");
-    }
-  }, 2000);
-});
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(currentIndex);
+}
+/**********/

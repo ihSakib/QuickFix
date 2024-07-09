@@ -121,7 +121,7 @@ static/
 
 # Local Firebase cache files
 .firestore/
-
+archive.txt
 # Vercel and Netlify files
 .vercel
 .netlify

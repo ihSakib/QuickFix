@@ -6,6 +6,10 @@
     <title>QuickFix</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
   </head>
   <body>
     <!-- header -->
@@ -36,10 +40,10 @@
         </div>
         <!-- hero section mid content -->
         <div
-          class="grid xl:grid-cols-2 md:gap-16 gap-10 items-center lg:mt-5 py- lg:py-16 xl:py-0"
+          class="grid xl:grid-cols-2 xl:pt-5 md:gap-16 gap-10 pb-10 items-center content-center xl:justify-center"
         >
           <div>
-            <h1 class="lg:text-6xl md:text-4xl text-3xl font-bold py-4">
+            <h1 class="xl:text-6xl lg:text-4xl text-3xl font-bold py-4">
               Experience the Best in Auto Repair and Maintenance
             </h1>
             <p class="text-lg text-neutral-600 font-semibold">
@@ -239,11 +243,308 @@
       </section>
 
       <!-- testimonial section -->
-      <section class="section5 testimonial"></section>
+      <section class="section5 testimonial">
+        <div class="py-8 px-6 lg:px-12 bg-[#ECFFFD]">
+          <!-- testimonial header -->
+          <div class="flex justify-between items-center py-8">
+            <h2 class="text-3xl lg:text-4xl font-bold">
+              what our client are saying
+            </h2>
+            <div class="grid grid-cols-2 gap-3 lg:gap-6">
+              <button onclick="prevSlide()">
+                <i
+                  class="fa-solid fa-circle-arrow-left text-2xl lg:text-4xl hover:text-neutral-700"
+                ></i>
+              </button>
+              <button onclick="nextSlide()">
+                <i
+                  class="fa-solid fa-circle-arrow-right text-2xl lg:text-4xl hover:text-neutral-700"
+                ></i>
+              </button>
+            </div>
+          </div>
+          <!-- client review -->
+          <div
+            class="parent grid grid-cols-1 lg:items-stretch lg:py-10 items-center gap-y-4 lg:grid-cols-3 lg:gap-x-4"
+          >
+            <!-- client 1 -->
+            <div class="child py-6 px-6 rounded-xl bg-white">
+              <div>
+                <div class="star">
+                  <img
+                    class="w-16 lg:w-30"
+                    src="./assets/images/star.png"
+                    alt=""
+                  />
+                </div>
+                <p class="py-4 text-lg text-neutral-800">
+                  “Top-notch service! QuickFix Car Repair Workshop went above
+                  and beyond during my check-up. Profesional, efficient,
+                  transparent. Highly recommended!”
+                </p>
+              </div>
+              <div class="flex gap-3 items-center w-fit">
+                <div>
+                  <img class="" src="./assets/images/Ellipse 57.png" alt="" />
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold">Mr Tom</h3>
+                  <p class="font-light text-neutral-700">Nursing Assistant</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- client 2 -->
+            <div class="child py-6 px-6 rounded-xl bg-white">
+              <div>
+                <div class="star">
+                  <img
+                    class="w-16 lg:w-30"
+                    src="./assets/images/star.png"
+                    alt=""
+                  />
+                </div>
+                <p class="py-4 text-lg text-neutral-800">
+                  “I recently moved to the area and was in search of a reliable
+                  auto repair shop. I'm so glad I found XYZ Car Repair Workshop!
+                  From my first phone call to driving my repaired car off the
+                  lot, the experience was seamless.”
+                </p>
+              </div>
+              <div class="flex gap-3 items-center w-fit">
+                <div>
+                  <img class="" src="./assets/images/Ellipse2.png" alt="" />
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold">Jenny Jenifer</h3>
+                  <p class="font-light text-neutral-700">
+                    Nursing Collaborator
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- client 3 -->
+            <div class="child py-6 px-6 rounded-xl bg-white">
+              <div>
+                <div class="star">
+                  <img
+                    class="w-16 lg:w-30"
+                    src="./assets/images/star.png"
+                    alt=""
+                  />
+                </div>
+                <p class="py-4 text-lg text-neutral-800">
+                  “I've been taking my cars to XYZ Car Repair Workshop for
+                  years, and they never disappoint. Whether it's a simple oil
+                  change or a more complex repair.”
+                </p>
+              </div>
+              <div class="flex gap-3 items-center w-fit">
+                <div>
+                  <img class="" src="./assets/images/Ellipse3.png" alt="" />
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold">Darlene Robertson</h3>
+                  <p class="font-light text-neutral-700">Marketing Officer</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- client 4 -->
+            <div class="child py-6 px-6 rounded-xl bg-white">
+              <div>
+                <div class="star">
+                  <img
+                    class="w-16 lg:w-30"
+                    src="./assets/images/star.png"
+                    alt=""
+                  />
+                </div>
+                <p class="py-4 text-lg text-neutral-800">
+                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Dolorem accusamus rerum voluptas eum, eaque perspiciatis autem
+                  sequi dolorum expedita, adipisci facere, deleniti minima illum
+                  officia repellat temporibus voluptatum. Illo, dolorum!"
+                </p>
+              </div>
+              <div class="flex gap-3 items-center w-fit">
+                <div>
+                  <img class="" src="./assets/images/Ellipse 57.png" alt="" />
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold">Obaydul Kader</h3>
+                  <p class="font-light text-neutral-700">Politician</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- client 5 -->
+            <div class="child py-6 px-6 rounded-xl bg-white">
+              <div>
+                <div class="star">
+                  <img
+                    class="w-16 lg:w-30"
+                    src="./assets/images/star.png"
+                    alt=""
+                  />
+                </div>
+                <p class="py-4 text-lg text-neutral-800">
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis ut corporis, dicta saepe sed a harum illum
+                  aliquam laudantium consequuntur. Perferendis eligendi fugiat
+                  recusandae repudiandae itaque eos nobis delectus beatae?"
+                </p>
+              </div>
+              <div class="flex gap-3 items-center w-fit">
+                <div>
+                  <img class="" src="./assets/images/Ellipse2.png" alt="" />
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold">Sheikh Hasina</h3>
+                  <p class="font-light text-neutral-700">Prime Minister</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- faq section -->
-      <section class="section6 faq"></section>
+      <section class="section6 faq">
+        <div class="px-10 lg:px-12 py-10 lg:py-12">
+          <h2 class="text-3xl lg:text-4xl font-bold">
+            Frequently asked questions
+          </h2>
+
+          <div class="py-4">
+            <details>
+              <summary class="text-lg">
+                What types of vehicles do you service?
+              </summary>
+              <p>
+                At our service center, we provide maintenance and repair
+                services for a wide range of vehicles. We cater to sedans of all
+                sizes, including compact, mid-size, and full-size models from
+                various manufacturers. We also service all types of SUVs, from
+                compact to full-size. Our expertise extends to light-duty,
+                medium-duty, and heavy-duty trucks. Additionally, we handle both
+                passenger and cargo vans of all sizes. We also specialize in
+                hybrid vehicles from all major manufacturers, ensuring
+                comprehensive care for your vehicle's specific needs.
+              </p>
+            </details>
+
+            <details>
+              <summary>What services do you offer?</summary>
+              <p>
+                At XYZ Car Repair Workshop, we offer comprehensive automotive
+                services, from routine maintenance to major repairs. Trust our
+                skilled technicians to keep your vehicle running smoothly and
+                safely.
+              </p>
+            </details>
+
+            <details>
+              <summary>Do you specialize in certain types of repairs?</summary>
+              <p>
+                Yes, we specialize in a variety of repair services to ensure
+                your vehicle runs smoothly. Our expertise includes engine
+                diagnostics and repairs, transmission services, brake system
+                maintenance, and electrical system troubleshooting. We also
+                focus on suspension and steering repairs, exhaust system
+                services, and heating and air conditioning maintenance.
+                Additionally, we offer specialized services for hybrid vehicles,
+                including battery health checks and component repairs. Whether
+                it's a routine maintenance task or a complex repair, our team is
+                equipped to handle it with precision and care.
+              </p>
+            </details>
+
+            <details>
+              <summary>How can I schedule an appointment?</summary>
+              <p>
+                Scheduling an appointment with us is straightforward. You can
+                easily book a service slot by visiting our website and
+                navigating to the appointment scheduling section. Alternatively,
+                you can give us a call during our business hours, and our
+                friendly staff will assist you in selecting a convenient time
+                for your appointment. We prioritize your convenience, so whether
+                you prefer online booking or speaking directly with us, we're
+                here to ensure your scheduling process is seamless.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- footer -->
-    <footer id="footer"></footer>
+
+    <footer>
+      <div class="bg-[#101828] pt-8 lg:py-0">
+        <div
+          class="flex flex-col lg:flex-row lg:justify-between lg:mx-10 xl:mx-20 lg:py-10 lg:items-stretch"
+        >
+          <div
+            class="py-4 flex flex-col items-center lg:items-start text-center lg:text-left"
+          >
+            <div>
+              <img class="w-36" src="./assets/images/Main-logo.png" alt="" />
+            </div>
+            <p class="text-white w-3/5 pt-4">
+              It is a long established fact that a reader will be distracted by
+              the readable content .
+            </p>
+            <p class="flex gap-4 text-white pt-3 text-2xl">
+              <a href="">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-x"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center py-4">
+            <div class="py-2 lg:py-0 lg:flex lg:gap-8">
+              <p class="text-gray-300 mb-4">
+                <i class="fa-solid fa-envelope"></i> Email <br />
+                <a class="text-white text-2xl" href="">quickfix@gmail.com</a>
+              </p>
+              <p class="text-gray-300 mb-4">
+                <i class="fa-solid fa-phone"></i> Call Us <br />
+                <a class="text-white text-2xl" href="">(123) 555-0126</a>
+              </p>
+            </div>
+            <div class="text-gray-300 flex gap-10 py-4 font-light">
+              <a href="">Home</a><a href="">About Us</a><a href="">Services</a
+              ><a href="">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <hr
+          style="height: 1px; opacity: 16%"
+          class="mx-10 xl:mx-20 bg-[#FFFFFF] border-none"
+        />
+        <!-- bottom of footer -->
+        <div
+          class="flex flex-col lg:flex-row lg:justify-between lg:mx-10 xl:mx-20 gap-y-1 items-center py-4 text-gray-400"
+        >
+          <div><p>© QuickFix Copyright 2024 All Rights Reserved.</p></div>
+          <div>
+            <a href=""></a> Privacy Policy <a href=""> Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- js -->
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
