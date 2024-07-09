@@ -17,9 +17,11 @@ h4 {
 }
 p,
 a,
-button {
+button,
+summary {
   font-family: Helvetica;
 }
+
 /*css for details*/
 @keyframes details-show {
   from {
