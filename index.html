@@ -17,6 +17,8 @@
     <header></header>
     <!-- main content -->
     <main>
+      <!-- dummy -->
+      <div id="blackOverlay" class="fixed hidden top-0 right-0 left-0 h-full"></div>
       <!-- hero section -->
       <section class="section1 hero bg-[#ECFFFD] px-10 md:px-12 lg:px-28">
         <!-- hero section header -->
@@ -31,7 +33,7 @@
 
           <div
             id="sidebar"
-            class="fixed top-0 right-0 w-0 h-full overflow-hidden  bg-slate-200 flex flex-col py-24 text-center gap-y-5 md:flex md:flex-row md:static md:py-0 md:px-0 md:bg-transparent md:gap-x-4 md:w-auto"
+            class="fixed top-0 right-0 w-0 h-full overflow-hidden bg-slate-200 flex flex-col py-24 text-center gap-y-5 md:flex md:flex-row md:static md:py-0 md:px-0 md:bg-transparent md:gap-x-4 md:w-auto"
           >
             <a
               class="mx-10 md:mx-0 py-3 px-6 font-semibold rounded-lg lg:text-xl text-sm border-2 border-[#006b61] text-[#006b61]"
@@ -45,7 +47,8 @@
             >
               Register as Partner
             </a>
-            <button onclick="closeSideBar()"
+            <button
+              onclick="closeSideBar()"
               class="block md:hidden text-4xl font-bold hover:text-red-600 absolute top-6 right-10"
             >
               ×

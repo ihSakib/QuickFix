@@ -5,6 +5,7 @@
 }
 body {
   margin: 0;
+  transition: background-color .5s;
 }
 img {
   width: 100%;
@@ -21,7 +22,9 @@ button,
 summary {
   font-family: Helvetica;
 }
-
+#blackOverlay{
+  background-color: rgba(0, 0, 0, 0.4);
+}
 /*css for details*/
 @keyframes details-show {
   from {
