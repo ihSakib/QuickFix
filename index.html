@@ -147,14 +147,14 @@
                 </label>
                 <label
                   class="bg-white flex items-center md:p-4 p-3 mt-3 rounded-lg text-neutral-900 font-semibold gap-2 text-lg"
-                  for="Truk"
+                  for="truk"
                 >
                   <input
                     class="h-6 w-6"
                     type="checkbox"
                     name="vehicles[]"
                     value="truk"
-                    id="Truk"
+                    id="truk"
                   />
                   Truk
                 </label>
@@ -166,11 +166,12 @@
                   Enter Address
                 </h3>
                 <div class="flex items-center bg-white rounded-lg my-3">
-                  <span>
-                    <i class="text-gray-400 ml-4 fas fa-map-marker-alt"></i
+                  <span
+                    ><i class="text-gray-400 ml-4 fas fa-map-marker-alt"></i
                   ></span>
                   <input
                     type="text"
+                    name="address"
                     placeholder="Enter Address"
                     class="placeholder-gray-400 md:p-4 p-3 border-0 w-full outline-none rounded-lg text-neutral-900 font-semibold gap-2 text-lg"
                   />
@@ -179,7 +180,6 @@
                 <div>
                   <iframe
                     class="rounded-lg w-full"
-                    class="rounded-lg"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7328.040883481764!2d90.9676077!3d23.315017100000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37548b9702db0349%3A0x860856d7a12663d9!2sNurpur%20Korban%20Ali%20Chairman%20Bari!5e0!3m2!1sen!2sbd!4v1720605660098!5m2!1sen!2sbd"
                     width=""
                     height="200"
@@ -196,7 +196,6 @@
                 <h3 class="pt-2 pb-2 md:text-2xl text-xl font-semibold">
                   Search Radius from Your Address
                 </h3>
-
                 <div
                   class="flex flex-col items-center bg-white my-3 py-6 px-8 rounded-lg"
                 >
@@ -209,6 +208,7 @@
                   <div class="relative w-full">
                     <input
                       type="range"
+                      name="radius"
                       min="0"
                       max="60"
                       value="20"
@@ -222,7 +222,6 @@
                     </div>
                   </div>
                 </div>
-
                 <!-- map api  -->
                 <div>
                   <iframe
@@ -244,7 +243,6 @@
                   <h2 class="pt-2 pb-2 md:text-2xl text-xl font-semibold">
                     What Service You Want
                   </h2>
-
                   <div class="grid grid-cols-2 my-4 gap-x-4 text-lg">
                     <div class="space-y-2">
                       <label class="block text-white">
@@ -284,7 +282,6 @@
                         Repair
                       </label>
                     </div>
-
                     <div class="space-y-2">
                       <label class="block text-white">
                         <input
@@ -338,7 +335,6 @@
                       required
                     />
                   </div>
-
                   <div
                     class="border-dashed border-2 border-gray-300 p-6 rounded-md text-white"
                   >
@@ -356,7 +352,6 @@
                       </div>
                     </div>
                   </div>
-
                   <div>
                     <label class="block text-white text-lg mb-2">Milage</label>
                     <input
@@ -367,7 +362,6 @@
                       required
                     />
                   </div>
-
                   <div>
                     <label class="block text-white text-lg mb-2"
                       >Description Of The Job</label
@@ -380,7 +374,6 @@
                       required
                     ></textarea>
                   </div>
-
                   <div>
                     <label class="block text-white text-lg mb-2"
                       >Attach Images</label
@@ -391,7 +384,6 @@
                         class="flex flex-row-reverse gap-4"
                       >
                         <!-- Preview images will be appended here -->
-
                         <label
                           class="w-20 h-20 bg-gray-200 flex items-center justify-center rounded-md cursor-pointer"
                         >
@@ -402,7 +394,12 @@
                             multiple
                             onchange="previewImages(event)"
                           />
-                          <div class="flex flex-col items-center">
+                          <div
+                            class="flex flex-col items-center text-[#006B61]"
+                          >
+                            <span
+                              ><i class="fa-solid fa-arrow-up-from-bracket"></i
+                            ></span>
                             <span class="text-teal-800 text-sm">Upload</span>
                           </div>
                         </label>
@@ -467,7 +464,7 @@
               </div>
 
               <!-- 7th step -->
-              <div  class=" w-0 h-0 tab"></div>
+              <div class="w-0 h-0 tab"></div>
 
               <!-------- form footer---------->
               <!-- next and submit button -->
