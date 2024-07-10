@@ -18,7 +18,10 @@
     <!-- main content -->
     <main>
       <!-- dummy -->
-      <div id="blackOverlay" class="fixed hidden top-0 right-0 left-0 h-full"></div>
+      <div
+        id="blackOverlay"
+        class="fixed hidden top-0 right-0 left-0 h-full"
+      ></div>
       <!-- hero section -->
       <section class="section1 hero bg-[#ECFFFD] px-10 md:px-12 lg:px-28">
         <!-- hero section header -->
@@ -94,15 +97,20 @@
           <!-- hero section form -->
           <div>
             <form
-              class="text-white bg-[#006b61] form-bg rounded-3xl px-8 py-10"
+              id="searchForm"
+              class="text-white bg-[#006b61] form-bg rounded-3xl px-8 pt-10 pb-5"
               action=""
             >
+              <!-- form header -->
               <h2 class="md:text-3xl text-2xl text-white font-bold">
                 Find the right workshop for your needs
               </h2>
               <p class="text-white pt-2">
                 The service is free and completely non-binding.
               </p>
+
+              <!------------ form body ------->
+              <!-- 1st step -->
               <div class="tab py-4">
                 <h3 class="pt-2 pb-2 md:text-2xl text-xl font-semibold">
                   Select type of vehicles
@@ -111,35 +119,380 @@
                   class="bg-white flex items-center md:p-4 p-3 my-3 rounded-lg text-neutral-900 font-semibold gap-2 text-lg"
                   for="car"
                 >
-                  <input class="h-6 w-6" type="checkbox" name="" id="car" /> Car
+                  <input
+                    class="h-6 w-6"
+                    type="checkbox"
+                    name="vehicles[]"
+                    value="car"
+                    id="car"
+                  />
+                  Car
                 </label>
                 <label
                   class="bg-white flex items-center md:p-4 p-3 my-3 rounded-lg text-neutral-900 font-semibold gap-2 text-lg"
                   for="bike"
                 >
-                  <input class="h-6 w-6" type="checkbox" name="" id="bike" />
+                  <input
+                    class="h-6 w-6"
+                    type="checkbox"
+                    name="vehicles[]"
+                    value="bike"
+                    id="bike"
+                  />
                   Bike
                 </label>
                 <label
                   class="bg-white flex items-center md:p-4 p-3 mt-3 rounded-lg text-neutral-900 font-semibold gap-2 text-lg"
                   for="Truk"
                 >
-                  <input class="h-6 w-6" type="checkbox" name="" id="Truk" />
+                  <input
+                    class="h-6 w-6"
+                    type="checkbox"
+                    name="vehicles[]"
+                    value="truk"
+                    id="Truk"
+                  />
                   Truk
                 </label>
               </div>
+
+              <!-- 2nd step -->
+              <div class="tab py-4">
+                <h3 class="pt-2 pb-2 md:text-2xl text-xl font-semibold">
+                  Enter Address
+                </h3>
+                <div class="flex items-center bg-white rounded-lg my-3">
+                  <span>
+                    <i class="text-gray-400 ml-4 fas fa-map-marker-alt"></i
+                  ></span>
+                  <input
+                    type="text"
+                    placeholder="Enter Address"
+                    class="placeholder-gray-400 md:p-4 p-3 border-0 w-full outline-none rounded-lg text-neutral-900 font-semibold gap-2 text-lg"
+                  />
+                </div>
+                <!-- map api  -->
+                <div>
+                  <iframe
+                    class="rounded-lg w-full"
+                    class="rounded-lg"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7328.040883481764!2d90.9676077!3d23.315017100000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37548b9702db0349%3A0x860856d7a12663d9!2sNurpur%20Korban%20Ali%20Chairman%20Bari!5e0!3m2!1sen!2sbd!4v1720605660098!5m2!1sen!2sbd"
+                    width=""
+                    height="200"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+
+              <!-- 3rd step -->
+              <div class="tab py-4">
+                <h3 class="pt-2 pb-2 md:text-2xl text-xl font-semibold">
+                  Search Radius from Your Address
+                </h3>
+
+                <div
+                  class="flex flex-col items-center bg-white my-3 py-6 px-8 rounded-lg"
+                >
+                  <div
+                    class="flex justify-between w-full text-[#667085] text-sm mb-1"
+                  >
+                    <span>0KM</span>
+                    <span>60KM</span>
+                  </div>
+                  <div class="relative w-full">
+                    <input
+                      type="range"
+                      min="0"
+                      max="60"
+                      value="20"
+                      class="w-full h-4 bg-gray-200 rounded-lg appearance-none cursor-pointer range-thumb"
+                    />
+                    <div
+                      id="sliderValue"
+                      class="absolute top-[-40px] bg-gray-100 text-red-500 px-2 py-0.5 rounded-md shadow-md"
+                    >
+                      20KM
+                    </div>
+                  </div>
+                </div>
+
+                <!-- map api  -->
+                <div>
+                  <iframe
+                    class="rounded-lg w-full"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7328.040883481764!2d90.9676077!3d23.315017100000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37548b9702db0349%3A0x860856d7a12663d9!2sNurpur%20Korban%20Ali%20Chairman%20Bari!5e0!3m2!1sen!2sbd!4v1720605660098!5m2!1sen!2sbd"
+                    width=""
+                    height="200"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+
+              <!-- 4th step -->
+              <div class="tab py-4">
+                <div class="px-4">
+                  <h2 class="pt-2 pb-2 md:text-2xl text-xl font-semibold">
+                    What Service You Want
+                  </h2>
+
+                  <div class="grid grid-cols-2 my-4 gap-x-4 text-lg">
+                    <div class="space-y-2">
+                      <label class="block text-white">
+                        <input
+                          type="checkbox"
+                          name="services[]"
+                          value="EU Kontroll/Etterkontroll"
+                          class="mr-2"
+                        />
+                        EU Kontroll/Etterkontroll
+                      </label>
+                      <label class="block text-white">
+                        <input
+                          type="checkbox"
+                          name="services[]"
+                          value="Wheels/Tyres"
+                          class="mr-2"
+                        />
+                        Wheels/Tyres
+                      </label>
+                      <label class="block text-white">
+                        <input
+                          type="checkbox"
+                          name="services[]"
+                          value="Service"
+                          class="mr-2"
+                        />
+                        Service
+                      </label>
+                      <label class="block text-white">
+                        <input
+                          type="checkbox"
+                          name="services[]"
+                          value="Repair"
+                          class="mr-2"
+                        />
+                        Repair
+                      </label>
+                    </div>
+
+                    <div class="space-y-2">
+                      <label class="block text-white">
+                        <input
+                          type="checkbox"
+                          name="services[]"
+                          value="Painting"
+                          class="mr-2"
+                        />
+                        Painting
+                      </label>
+                      <label class="block text-white">
+                        <input
+                          type="checkbox"
+                          name="services[]"
+                          value="Car care"
+                          class="mr-2"
+                        />
+                        Car care
+                      </label>
+                      <label class="block text-white">
+                        <input
+                          type="checkbox"
+                          name="services[]"
+                          value="Other"
+                          class="mr-2"
+                        />
+                        Other
+                      </label>
+                      <textarea
+                        name="otherService"
+                        placeholder="Write your desire service"
+                        class="mt-2 p-2 w-full rounded-md border border-gray-300"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5th step -->
+              <div class="tab step5 py-4">
+                <div class="p-6 rounded-md space-y-6">
+                  <div>
+                    <label class="block text-white text-lg mb-2"
+                      >Registration Number</label
+                    >
+                    <input
+                      type="text"
+                      name="registrationNumber"
+                      placeholder="Enter Registration Number"
+                      class="w-full p-2 rounded-md border border-gray-300"
+                      required
+                    />
+                  </div>
+
+                  <div
+                    class="border-dashed border-2 border-gray-300 p-6 rounded-md text-white"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <div
+                        class="w-12 h-12 ml-0 flex items-center justify-center"
+                      >
+                        <img src="./assets/images/car.png" alt="" />
+                      </div>
+                      <div
+                        class="border-l border-gray-200 border-opacity-40 px-4"
+                      >
+                        <p class="mb-1">Brand: Toyota</p>
+                        <p>Model No: 2532A</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="block text-white text-lg mb-2">Milage</label>
+                    <input
+                      type="text"
+                      name="milage"
+                      placeholder="Enter current milage"
+                      class="w-full p-2 rounded-md border border-gray-300"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label class="block text-white text-lg mb-2"
+                      >Description Of The Job</label
+                    >
+                    <textarea
+                      name="jobDescription"
+                      placeholder="Describe"
+                      class="w-full p-2 rounded-md border border-gray-300"
+                      rows="4"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div>
+                    <label class="block text-white text-lg mb-2"
+                      >Attach Images</label
+                    >
+                    <div class="flex">
+                      <div
+                        id="preview-container"
+                        class="flex flex-row-reverse gap-4"
+                      >
+                        <!-- Preview images will be appended here -->
+
+                        <label
+                          class="w-20 h-20 bg-gray-200 flex items-center justify-center rounded-md cursor-pointer"
+                        >
+                          <input
+                            type="file"
+                            name="images[]"
+                            class="hidden"
+                            multiple
+                            onchange="previewImages(event)"
+                          />
+                          <div class="flex flex-col items-center">
+                            <span class="text-teal-800 text-sm">Upload</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 6th step -->
+              <div class="tab step6 py-4">
+                <div class="p-6 space-y-4">
+                  <div>
+                    <label class="block text-white mb-2" for="first-name"
+                      >First Name</label
+                    >
+                    <input
+                      class="w-full p-2 rounded-md border border-zinc-300"
+                      type="text"
+                      name="first-name"
+                      id="first-name"
+                      placeholder="Enter your name..."
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-white mb-2" for="last-name"
+                      >Last Name</label
+                    >
+                    <input
+                      class="w-full p-2 rounded-md border border-zinc-300"
+                      type="text"
+                      name="last-name"
+                      id="last-name"
+                      placeholder="Enter your name..."
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-white mb-2" for="email"
+                      >Email</label
+                    >
+                    <input
+                      class="w-full p-2 rounded-md border border-zinc-300"
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Enter your email..."
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-white mb-2" for="phone-number"
+                      >Phone Number</label
+                    >
+                    <input
+                      class="w-full p-2 rounded-md border border-zinc-300"
+                      type="tel"
+                      name="phone"
+                      id="phone-number"
+                      placeholder="Enter your number..."
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- 7th step -->
+              <div class="tab py-4"></div>
+
+              <!-------- form footer---------->
+              <!-- next and submit button -->
               <div>
                 <button
+                  id="nextBtn"
+                  type="button"
+                  onclick="nextPrev(1)"
                   class="md:p-4 p-3 my-4 block w-full h-full text-lg font-semibold rounded-xl bg-[#f15757]"
                 >
                   Next
                 </button>
               </div>
+              <!-- form footer text-->
               <p class="text-sm text-center">
                 Your privacy is safeguarded: We process all data in
                 accordance<br />with the Personal Data Protection Regulation
                 (GDPR).
               </p>
+              <!-- Circles which indicates the steps of the form: -->
+              <div class="flex gap-2 mt-4 justify-center items-stretch">
+                <span class="step">1</span>
+                <span class="step">2</span>
+                <span class="step">3</span>
+                <span class="step">4</span>
+                <span class="step">5</span>
+                <span class="step">6</span>
+                <span class="step">7</span>
+              </div>
             </form>
           </div>
         </div>
@@ -567,5 +920,6 @@
 
     <!-- js -->
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/form.js"></script>
   </body>
 </html>

@@ -5,7 +5,7 @@
 }
 body {
   margin: 0;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 img {
   width: 100%;
@@ -19,10 +19,12 @@ h4 {
 p,
 a,
 button,
-summary {
+summary,
+span,
+.sliderValue {
   font-family: Helvetica;
 }
-#blackOverlay{
+#blackOverlay {
   background-color: rgba(0, 0, 0, 0.4);
 }
 /*css for details*/
@@ -73,4 +75,47 @@ details > summary::after {
 details[open] > summary::after {
   content: "–";
   transform: rotate(180deg);
+}
+/*form*/
+.tab {
+  display: none;
+}
+.step {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  opacity: 0.5;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+/****slider of form step 3****/
+.range-thumb::-webkit-slider-thumb {
+  appearance: none;
+  width: 10px;
+  height: 30px;
+  background: #f87171;
+  border-radius: 32px;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+.range-thumb::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #f87171;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+/*****/
+.step5 label,
+.step6 label {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
 }
