@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Centers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      h1,
+      h2,
+      h3 {
+        font-family: Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="py-4 px-10 shadow">
+      <img class="w-30 lg:w-40" src="./assets/images/Main-logo.png" alt="" />
+    </header>
+
+    <main class="mx-10 md:mx-[100px] lg:mx-[300px] ">
+      <!-- top banner -->
+      <div class="mt-10">
+        <img src="./assets/images/Frame-service-list.png" alt="" />
+      </div>
+      <!-- offer control -->
+      <div class="mt-14">
+        <!-- for large screen -->
+        <div class="hidden min-[1600px]:flex justify-between items-center">
+          <div class="space-y-8">
+            <h2 class="text-xl lg:text-2xl font-semibold text-[#192A2E]">
+              We found
+              <span class="py-1 px-4 bg-[#006B61] text-white rounded-lg"
+                >48231</span
+              >
+              The following options
+            </h2>
+            <p class="flex gap-2">
+              <button
+                class="bg-neutral-100 text-neutral-700 font-semibold py-2 px-4 rounded-lg"
+              >
+                Price</button
+              ><button
+                class="bg-neutral-100 text-neutral-700 font-semibold py-2 px-4 rounded-lg"
+              >
+                Distance</button
+              ><button
+                class="bg-neutral-100 text-neutral-700 font-semibold py-2 px-4 rounded-lg"
+              >
+                Hourly Rate</button
+              ><button
+                class="bg-neutral-100 text-neutral-700 font-semibold py-2 px-4 rounded-lg"
+              >
+                Review
+              </button>
+            </p>
+          </div>
+          <div class="bg-[#006B61] text-white lg:text-lg py-3 px-4 rounded-lg">
+            <p>https://app.mavia.com/profile/username <span>copy</span></p>
+          </div>
+        </div>
+
+        <!-- for small screen -->
+        <div
+          class="flex min-[1600px]:hidden basis-full items-end justify-between"
+        >
+          <div>
+            <h2 class="text-xl mb-8 font-semibold text-[#192A2E]">
+              We found
+              <span class="py-1 px-4 bg-[#006B61] text-white rounded-lg"
+                >48231</span
+              >
+              The following options
+            </h2>
+            <button
+              type="button"
+              class="bg-[#006B61] text-white lg:text-lg py-3 px-4 rounded-lg"
+            >
+              Filter
+            </button>
+          </div>
+          <div>
+            <button
+              type="button"
+              class="bg-[#006B61] text-white lg:text-lg py-3 px-4 rounded-lg"
+            >
+              copy username
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div></div>
+      <div></div>
+      <div></div>
+    </main>
+
+    <footer id="footer" class="mt-10"></footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("./assets/components/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer").innerHTML = data;
+          })
+          .catch((error) => console.error("Error fetching the footer:", error));
+      });
+    </script>
+  </body>
+</html>

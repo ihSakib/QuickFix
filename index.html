@@ -855,72 +855,20 @@
     </main>
     <!-- footer -->
 
-    <footer>
-      <div class="bg-[#101828] pt-8 lg:py-0">
-        <div
-          class="flex flex-col lg:flex-row lg:justify-between lg:mx-10 xl:mx-20 lg:py-10 lg:items-stretch"
-        >
-          <div
-            class="py-4 flex flex-col items-center lg:items-start text-center lg:text-left"
-          >
-            <div>
-              <img class="w-36" src="./assets/images/Main-logo.png" alt="" />
-            </div>
-            <p class="text-white w-3/5 pt-4">
-              It is a long established fact that a reader will be distracted by
-              the readable content .
-            </p>
-            <p class="flex gap-4 text-white pt-3 text-2xl">
-              <a href="">
-                <i class="fa-brands fa-facebook"></i>
-              </a>
-              <a href="">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-              <a href="">
-                <i class="fa-brands fa-x"></i>
-              </a>
-              <a href="">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-            </p>
-          </div>
-
-          <div class="flex flex-col items-center text-center py-4">
-            <div class="py-2 lg:py-0 lg:flex lg:gap-8">
-              <p class="text-gray-300 mb-4">
-                <i class="fa-solid fa-envelope"></i> Email <br />
-                <a class="text-white text-2xl" href="">quickfix@gmail.com</a>
-              </p>
-              <p class="text-gray-300 mb-4">
-                <i class="fa-solid fa-phone"></i> Call Us <br />
-                <a class="text-white text-2xl" href="">(123) 555-0126</a>
-              </p>
-            </div>
-            <div class="text-gray-300 flex gap-10 py-4 font-light">
-              <a href="">Home</a><a href="">About Us</a><a href="">Services</a
-              ><a href="">Contact Us</a>
-            </div>
-          </div>
-        </div>
-        <hr
-          style="height: 1px; opacity: 16%"
-          class="mx-10 xl:mx-20 bg-[#FFFFFF] border-none"
-        />
-        <!-- bottom of footer -->
-        <div
-          class="flex flex-col lg:flex-row lg:justify-between lg:mx-10 xl:mx-20 gap-y-1 items-center py-4 text-gray-400"
-        >
-          <div><p>© QuickFix Copyright 2024 All Rights Reserved.</p></div>
-          <div>
-            <a href=""></a> Privacy Policy <a href=""> Terms of Service</a>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <footer id="footer"></footer>
 
     <!-- js -->
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/form.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("./assets/components/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer").innerHTML = data;
+          })
+          .catch((error) => console.error("Error fetching the footer:", error));
+      });
+    </script>
   </body>
 </html>
