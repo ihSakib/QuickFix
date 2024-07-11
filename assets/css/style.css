@@ -24,7 +24,8 @@ span,
 .sliderValue {
   font-family: Helvetica;
 }
-input,textarea{
+input,
+textarea {
   color: #171717 !important;
 }
 #blackOverlay {
@@ -80,9 +81,9 @@ details[open] > summary::after {
   transform: rotate(180deg);
 }
 /*form*/
-.tab {
+/* .tab {
   display: none;
-}
+} */
 .step {
   height: 25px;
   width: 25px;
@@ -97,8 +98,7 @@ details[open] > summary::after {
   font-size: 12px;
   color: #ffffff;
 }
-.step::after{
- 
+.step::after {
 }
 /****slider of form step 3****/
 .range-thumb::-webkit-slider-thumb {
@@ -120,7 +120,24 @@ details[open] > summary::after {
 }
 /*****/
 .step5 label,
-.step6 label {
+.step6 label,
+.step4 label {
   font-family: Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .step5 label,
+  .step6 label,
+  .step4 label {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .step5 label,
+  .step6 label,
+  .step4 label {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+  }
 }
