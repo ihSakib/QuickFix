@@ -70,7 +70,7 @@ function prevSlide() {
 
 /******* */
 function openSideBar() {
-  document.getElementById("sidebar").style.width = "0%";
+  document.getElementById("sidebar").style.width = "70%";
   document.getElementById("blackOverlay").style.display = "block";
 }
 function closeSideBar() {
