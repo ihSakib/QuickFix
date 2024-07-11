@@ -28,8 +28,13 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     // ... the form gets submitted:
     document.getElementById("searchForm").submit();
+
+    // Add a relative URL redirect after submission
+    window.location.href = "/service-center.html";
+
     return false;
   }
+
   // Otherwise, display the correct tab:
   showTab(currentTab);
 }
