@@ -13,8 +13,8 @@ function updateVisibleSlides() {
   showSlide(currentIndex);
 }
 
-window.onresize = updateVisibleSlides;
-window.onload = updateVisibleSlides;
+window.onresize = updateVisibleSlides();
+window.onload = updateVisibleSlides();
 
 function showSlide(index) {
   // Hide all slides initially
@@ -26,8 +26,6 @@ function showSlide(index) {
   for (let i = 0; i < visibleSlides; i++) {
     let slideIndex = (index + i) % slides.length;
     slides[slideIndex].style.display = "flex";
-    slides[slideIndex].style.flexDirection = "column";
-    slides[slideIndex].style.justifyContent = "space-between";
   }
 }
 

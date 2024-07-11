@@ -118,6 +118,11 @@ details[open] > summary::after {
   cursor: pointer;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
 }
+/*testimonial*/
+.child {
+  flex-direction: column;
+  justify-content: space-between;
+}
 /*****/
 .step5 label,
 .step6 label,
