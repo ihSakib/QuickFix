@@ -31,6 +31,9 @@ textarea {
 #blackOverlay {
   background-color: rgba(0, 0, 0, 0.4);
 }
+.sidebar {
+  transition: 0.6;
+}
 /*css for details*/
 @keyframes details-show {
   from {
@@ -63,6 +66,10 @@ details > summary {
   position: relative;
   display: flex;
   align-items: center;
+  padding-right: 50px;
+}
+details:hover {
+  border-color: gray;
 }
 details p {
   padding-bottom: 1.5rem;
@@ -130,6 +137,7 @@ details[open] > summary::after {
   font-family: Helvetica, sans-serif;
   font-size: 14px;
 }
+
 @media screen and (min-width: 768px) {
   .step5 label,
   .step6 label,

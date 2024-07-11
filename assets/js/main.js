@@ -2,7 +2,8 @@
 let slides = document.getElementsByClassName("child");
 let currentIndex = 0;
 let visibleSlides = 3; // Default for wide screens
-
+let nextButton = document.getElementById("nextButton");
+let prevButton = document.getElementById("prevButton");
 // Function to determine the number of visible slides based on screen width
 function updateVisibleSlides() {
   if (window.innerWidth < 1024) {
@@ -24,25 +25,52 @@ function showSlide(index) {
 
   // Show the appropriate number of slides based on the current index
   for (let i = 0; i < visibleSlides; i++) {
-    let slideIndex = (index + i) % slides.length;
+    // let slideIndex = (index + i) % slides.length;
+    let slideIndex = index + i;
     slides[slideIndex].style.display = "flex";
+  }
+
+  // button opacity
+  if (
+    index == slides.length - 1 ||
+    (window.innerWidth > 1024 && index == slides.length - 3)
+  ) {
+    nextButton.style.opacity = "50%";
+  } else if (index == 0) {
+    prevButton.style.opacity = "50%";
+  } else {
+    nextButton.style.opacity = "100%";
+    prevButton.style.opacity = "100%";
   }
 }
 
 function nextSlide() {
-  currentIndex = (currentIndex + 1) % slides.length;
-  showSlide(currentIndex);
+  // currentIndex = (currentIndex + 1) % slides.length;
+
+  if (
+    currentIndex == slides.length - 1 ||
+    (window.innerWidth > 1024 && currentIndex == slides.length - 3)
+  ) {
+    return false;
+  } else {
+    currentIndex++;
+    showSlide(currentIndex);
+  }
 }
 
 function prevSlide() {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  showSlide(currentIndex);
+  // currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  if (currentIndex == 0) {
+    return false;
+  } else {
+    currentIndex--;
+    showSlide(currentIndex);
+  }
 }
 
 /******* */
 function openSideBar() {
-  document.getElementById("sidebar").style.transition = ".6s";
-  document.getElementById("sidebar").style.width = "60%";
+  document.getElementById("sidebar").style.width = "0%";
   document.getElementById("blackOverlay").style.display = "block";
 }
 function closeSideBar() {

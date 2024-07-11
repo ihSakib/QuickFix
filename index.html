@@ -503,7 +503,6 @@
                 <span class="step">6</span>
                 <span class="step">7</span>
               </div>
-             
             </form>
           </div>
         </div>
@@ -551,7 +550,9 @@
 
       <!-- how it works section -->
       <section class="section3 how py-8 px-16 lg:px-20 lg:py-16">
-        <h1 class="text-center text-4xl py-4 font-bold">How it work</h1>
+        <h1 class="text-center text-2xl md:text-3xl lg:text-4xl py-4 font-bold">
+          How it work
+        </h1>
         <p class="lg:w-1/2 mx-auto text-center text-lg text-neutral-600">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
@@ -632,18 +633,18 @@
         <div class="py-8 px-6 lg:px-12 bg-[#ECFFFD]">
           <!-- testimonial header -->
           <div class="flex justify-between items-center py-8">
-            <h2 class="text-3xl lg:text-4xl font-bold">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold">
               what our client are saying
             </h2>
             <div class="grid grid-cols-2 gap-3 lg:gap-6">
-              <button onclick="prevSlide()">
+              <button id="prevButton" onclick="prevSlide()">
                 <i
-                  class="fa-solid fa-circle-arrow-left text-2xl lg:text-4xl hover:text-neutral-700"
+                  class="fa-solid fa-circle-arrow-left text-2xl lg:text-4xl text-[#006B61] hover:opacity-50"
                 ></i>
               </button>
-              <button onclick="nextSlide()">
+              <button id="nextButton" onclick="nextSlide()">
                 <i
-                  class="fa-solid fa-circle-arrow-right text-2xl lg:text-4xl hover:text-neutral-700"
+                  class="fa-solid fa-circle-arrow-right text-2xl lg:text-4xl text-[#006B61] hover:opacity-50"
                 ></i>
               </button>
             </div>
@@ -798,15 +799,13 @@
       <!-- faq section -->
       <section class="section6 faq">
         <div class="px-10 lg:px-12 py-10 lg:py-12">
-          <h2 class="text-3xl lg:text-4xl font-bold">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold">
             Frequently asked questions
           </h2>
 
           <div class="py-4">
             <details>
-              <summary class="text-lg">
-                What types of vehicles do you service?
-              </summary>
+              <summary>What types of vehicles do you service?</summary>
               <p>
                 At our service center, we provide maintenance and repair
                 services for a wide range of vehicles. We cater to sedans of all
