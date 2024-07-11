@@ -30,7 +30,7 @@ function nextPrev(n) {
     document.getElementById("searchForm").submit();
 
     // Add a relative URL redirect after submission
-    window.location.href = "/service-center.html";
+    // window.location.href = "/service-center.html";
 
     return false;
   }
